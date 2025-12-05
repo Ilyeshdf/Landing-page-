@@ -1,7 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Beaker, Scale, Trophy, MapPin, ArrowRight } from 'lucide-react';
 
 const Features = () => {
+    const [isVisible, setIsVisible] = useState(false);
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => {
+            if (sectionRef.current) {
+                observer.unobserve(sectionRef.current);
+            }
+        };
+    }, []);
+
     const features = [
         {
             icon: <Beaker className="w-8 h-8" />,
@@ -30,22 +54,25 @@ const Features = () => {
     ];
 
     return (
-        <section id="features" className="py-20 bg-white">
+        <section ref={sectionRef} id="features" className="py-20 bg-white">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold text-dark-gray mb-4">
+                    <h2 className={`text-3xl md:text-4xl font-bold text-dark-gray mb-4 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}>
                         Powerful Tools for Smart Breeding Decisions
                     </h2>
-                    <p className="text-lg text-gray-500 max-w-2xl mx-auto">
+                    <p className={`text-lg text-gray-500 max-w-2xl mx-auto ${isVisible ? 'animate-fade-in-up animate-delay-100' : 'opacity-0'}`}>
                         Everything you need to make data-driven agricultural choices
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
                     {features.map((feature, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-primary-green group cursor-pointer"
+                            className={`bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-t-4 border-primary-green group cursor-pointer ${
+                                isVisible ? 'animate-scale-in' : 'opacity-0'
+                            }`}
+                            style={{ animationDelay: isVisible ? `${index * 0.1}s` : '0s' }}
                         >
                             <div className="text-primary-green mb-4 group-hover:scale-110 transition-transform">
                                 {feature.icon}
