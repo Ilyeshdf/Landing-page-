@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import ModelViewer from "../components/ModelViewer";
 
 const Hero = () => {
     return (
@@ -16,9 +17,9 @@ const Hero = () => {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up animate-delay-200">
-                            <button className="bg-primary-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-dark-green transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-green/30 flex items-center justify-center gap-2 cursor-pointer animate-pulse-glow">
+                            <a href="https://zer3ax.vercel.app/" target='_blanck' className="bg-primary-green text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-dark-green transition-all transform hover:scale-105 shadow-lg hover:shadow-primary-green/30 flex items-center justify-center gap-2 cursor-pointer animate-pulse-glow">
                                 Start Predicting Now <ArrowRight size={20} />
-                            </button>
+                            </a>
                         </div>
 
                         <div className="flex flex-wrap gap-6 text-sm font-medium text-dark-gray/80">
@@ -35,18 +36,8 @@ const Hero = () => {
                     </div>
 
                     {/* Right Column: Visual */}
-                    <div className="lg:w-2/5 relative">
-                        <div className="relative z-10 animate-fade-in-right animate-delay-200">
-                            <div className="w-full h-96 bg-gradient-to-br from-primary-green/20 to-info/20 rounded-2xl shadow-2xl flex items-center justify-center animate-float">
-                                <div className="text-center p-8">
-                                    <div className="text-6xl mb-4">🌱</div>
-                                    <p className="text-dark-gray font-bold text-lg">AI-Powered Analysis</p>
-                                </div>
-                            </div>
-                        </div>
-                        {/* Decorative elements */}
-                        <div className="absolute -top-10 -right-10 w-64 h-64 bg-primary-green/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
-                        <div className="absolute -bottom-10 -left-10 w-64 h-64 bg-info/10 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }}></div>
+                    <div style={{ flex: 1 }}>
+                        <ModelViewer />
                     </div>
                 </div>
             </div>

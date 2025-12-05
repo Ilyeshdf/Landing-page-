@@ -28,9 +28,9 @@ const Navbar = () => {
         >
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
                 {/* Logo */}
-                <div className="flex flex-col leading-none">
+                <div className="flex flex-row leading-none items-center">
+                    <img src="src\assets\ChatGPT_Image_Dec_5__2025__01_03_42_AM-removebg-preview.png" alt="Zer3aX Logo" className="h-12 w-12" />
                     <span className="text-2xl font-bold text-dark-green font-sans tracking-tight">Zer3aX</span>
-                    <span className="text-[10px] font-bold text-primary-green tracking-wider uppercase mt-1">AI Plant Breeding</span>
                 </div>
 
                 {/* Desktop Menu */}
@@ -44,9 +44,9 @@ const Navbar = () => {
                             {link.name}
                         </a>
                     ))}
-                    <button className="bg-primary-green text-white px-6 py-2.5 rounded-full font-medium hover:bg-dark-green transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm cursor-pointer">
+                    <a href="https://zer3ax.vercel.app/" target='_blanck' className="bg-primary-green text-white px-6 py-2.5 rounded-full font-medium hover:bg-dark-green transition-all transform hover:scale-105 shadow-lg hover:shadow-xl text-sm cursor-pointer">
                         Get Started
-                    </button>
+                    </a>
                 </div>
 
                 {/* Mobile Menu Button */}

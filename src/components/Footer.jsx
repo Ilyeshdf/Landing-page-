@@ -94,7 +94,7 @@ const Footer = () => {
                 {/* Bottom Bar */}
                 <div className="border-t border-gray-700 pt-8 text-center">
                     <p className="text-gray-500 text-sm">
-                        Built with ❤️ for Algerian Agriculture
+                        Built with love for Algerian Agriculture
                     </p>
                 </div>
             </div>

@@ -13,9 +13,9 @@ const CTA = () => {
                         Join hundreds of agricultural professionals using AI to make smarter decisions
                     </p>
 
-                    <button className="bg-primary-green text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-dark-green transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center gap-2 cursor-pointer">
+                    <a href="https://zer3ax.vercel.app/" target='_blanck' className="bg-primary-green text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-dark-green transition-all transform hover:scale-105 shadow-lg hover:shadow-xl inline-flex items-center gap-2 cursor-pointer">
                         Get Started Free <ArrowRight size={20} />
-                    </button>
+                    </a>
 
                     <p className="text-sm text-gray-500 mt-6">
                         No credit card required • Free trial available

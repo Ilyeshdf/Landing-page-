@@ -5,7 +5,6 @@ import Features from './components/Features';
 import HowItWorks from './components/HowItWorks';
 import Benefits from './components/Benefits';
 import Statistics from './components/Statistics';
-import Testimonials from './components/Testimonials';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 
@@ -18,7 +17,6 @@ export default function App() {
       <HowItWorks />
       <Benefits />
       <Statistics />
-      <Testimonials />
       <CTA />
       <Footer />
     </div>
