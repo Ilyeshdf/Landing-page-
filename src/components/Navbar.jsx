@@ -29,7 +29,7 @@ const Navbar = () => {
             <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
                 {/* Logo */}
                 <div className="flex flex-row leading-none items-center">
-                    <img src="src\assets\ChatGPT_Image_Dec_5__2025__01_03_42_AM-removebg-preview.png" alt="Zer3aX Logo" className="h-12 w-12" />
+                    <img src="https://res.cloudinary.com/dfxhtf6xh/image/upload/v1764978209/ChatGPT_Image_Dec_5__2025__01_03_42_AM-removebg-preview_u4rqio.png" alt="Zer3aX Logo" className="h-12 w-12" />
                     <span className="text-2xl font-bold text-dark-green font-sans tracking-tight">Zer3aX</span>
                 </div>
 
